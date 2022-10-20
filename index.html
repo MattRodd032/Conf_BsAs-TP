@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+        :root{
+            --col-primario:#91be43;
+            --col-secundario:#7d994d;
+            --col-selector:rgb(24, 179, 24);
+            --col-selector-trans:rgb(24, 179, 24,.07);
+        }
+        /* -----------------NAV--------------------- */
+        .color-nav{
+        background-color: #27282bdc !important;
+        }
+        .navbar .navbar-collapse{
+            flex-grow: 0;
+        }
+        .navbar .navbar-brand{
+            color: white;
+        }
+        .navbar #navbarSupportedContent a{ 
+            color: rgba(201, 219, 216, 0.753);
+            font-size: 1.1rem;
+        }
+        .navbar #navbarSupportedContent a:hover{
+            color: white;
+        }
+        nav ul li a:hover{
+            color: var(--col-selector) !important;
+        }
+       
+        /* ------------------------HERO----------------------------- */
+        #imagen-hero{
+            background-size: cover !important;
+            background-position:bottom;
+            background: linear-gradient(rgba(5,7,12,0.50), rgba(5,7,12,0.70)),url("./img/ba1.jpg");
+            color: white;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        #imagen-hero .mx-auto{
+            margin-right: 5rem !important;
+        }
+        
+        #imagen-hero .btn-outline-secondary{
+            background-color:var(--col-selector-trans);
+            color: white;
+            border-color: white;
+        }
+        #imagen-hero .btn-outline-secondary:hover{
+            background-color: var(--col-selector);
+        }
+        
+        #imagen-hero .lead{
+            font-weight: 400;
+        }
+        #image-hero .font-h1{
+            font-size: 2.5rem;
+        }
+        /* -------------------------MAIN-------------------------- */
+        P:first-child{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: dotted;
+        }
+        span{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        main .container-cards{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        main .card{
+            margin: 0 1rem;
+        }
+
+        main .margen-foto{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        main .fondo-frase{
+            background-color: #27282bdc;
+            color: white;
+        }
+      /* -----------------------FORMULARIO------------------------ */
+        #convert-orador a{
+            text-decoration: none;
+            color: var(--col-primario);
+        }
+        .formulario{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        section form button{
+            background-color: var(--col-primario) !important;
+            border-color: var(--col-primario) !important;
+        }
+
+        section form button:hover{
+                background-color:var(--col-secundario)!important;
+        } 
+        /* --------------FOOTER------------------ */
+        .bg-gradient{
+            background-image: linear-gradient(to right, #1d3947, #1e5070) !important;
+        }
+
+        footer .container{
+            padding: 0.5rem;
+        }
+        footer .container a{
+            text-decoration: none;
+            color: white;
+        }
+
+        
+         
+        
+    </style>
+
+  
+</head>
+
+<body>
+    <header>
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg bg-light color-nav">
+            <div class="container-fluid mx-5">
+                <a class="navbar-brand " href="#">
+                <img src="./img/codoacodo.png" alt="Logo" width="120" height="70" class="d-inline-block align-text-center">Conf Bs As
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">La Conferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Los Oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">El Lugar y La Fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Conviértete en Orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./tickets.html">Comprar Tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- HERO -->
+        <div class="px-4 py-5 text-end border-bottom " id="imagen-hero">
+            <div class="col-lg-6 mx-auto ">
+                <h1 class="display-4 fw-bold font-h1">Conf Bs As</h1>
+                <p class="lead mb-4 ">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de Internet. Ven a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-end mb-5">
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Quiero ser orador</button>
+                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">Comprar Tickets</button>
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- ---------------------------------------- -->
+    <main class="container-fluid ">
+        <p>CONOCE A LOS <span>ORADORES</span></p>
+        
+        <!-- CARDS -->
+        <section class="row justify-content-center">
+            <div class="card col-md-4 " style="width: 22rem;">
+            <img src="./img/steve.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <span class="badge text-bg-warning">Warning</span>
+                    <span class="badge text-bg-info">Info</span>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+            <div class="card col-md-4" style="width: 22rem;">
+            <img src="./img/bill.jpg" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <span class="badge text-bg-warning">Warning</span>
+                    <span class="badge text-bg-info">Info</span>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+            <div class="card col-md-4" style="width: 22rem;">
+            <img src="./img/ada.jpeg" class="card-img-top " alt="...">
+                <div class="card-body">
+                    <span class="badge text-bg-secondary">Secondary</span>
+                    <span class="badge text-bg-danger">Danger</span>
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <!-- </div> -->
+        </section>
+        
+        <!-- CANCUN -->
+        <section class="row my-5">
+            <!-- <div class=""> -->
+                <div class="col-sm-6 margen-foto"> <!-- Imagen Cancún -->
+                    <img src="./img/honolulu.jpg" class="img-fluid" alt="...">
+    
+                </div>
+                <div class="col-sm-6 fondo-frase px-4 py-4" id="BsAs-gris"> <!-- Fondo Gris -->
+                    <h2>Bs As - Octubre</h2>
+                    <p>Buenos Aires es la provincia y localidad más grande del estado de Argentina. CABA (Ciudad autónoma de Buenos Aires) se encuentra al Este de Argentina y la localidad con más habitantes en el país. Se llama Autónoma dado que en 1996 la ciudad como parte de un acuerdo tiene la capacidad de decidir sin intervención ajena. </br>Te preguntarás por qué ves una playa en el lado izquierdo, al cuál sólo responderé... -Yo también me lo pregunto.
+                    </p>
+                    <button type="button" class="btn btn-outline-light">Conocé más</button>
+    
+                </div>
+            <!-- </div> -->
+        </section>
+        
+        <!-- TO_ORADOR -->
+        <div id="convert-orador">
+            <P>CONVIÉRTETE EN UN <SPAN>ORADOR</SPAN></P>
+            <p class="text-center">Anótate como orador para dar una <a href="#">charla ignite</a>. Cuéntanos de qué quieres hablar!</p> 
+        </div>
+
+        <!-- FORMULARIO -->
+        <section class="formulario mb-5">
+            <form >
+                <div class="row g-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre" required>
+                    </div>
+
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Sobre qué quieres hablar?"></textarea>
+                        <div id="emailHelp" class="form-text">Recuerda incluir un título para tu charla</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-style">Enviar</button>
+
+                </div>
+            </form>
+        </section>
+        
+    </main>
+    <!-- -------------------------------------- -->
+    <footer class="bg-gradient">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col m-2">
+                <a href="">Preguntas Frecuentes</a> 
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Contáctanos
+                </a> 
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Prensa
+                </a> 
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Conferencia
+                </a> 
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Términos y Condiciones</a>  
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Privacidad
+                </a> 
+              </div>
+              <div class="col m-2">
+                <a href="">
+                    Estudiantes
+                </a> 
+              </div>
+            </div>
+          </div>
+    </footer>        
+    <!-- --------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script></body>
+</body>
+</html>

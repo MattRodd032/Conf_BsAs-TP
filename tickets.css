@@ -1,0 +1,89 @@
+:root{
+    --col-primario:#91be43;
+    --col-secundario:#7d994d;
+    --col-selector:rgb(24, 179, 24);
+    --col-selector-trans:rgb(24, 179, 24,.07);
+}
+/* -----------------NAV--------------------- */
+.color-nav{
+background-color: #27282bdc !important;
+}
+.navbar .navbar-collapse{
+    flex-grow: 0;
+}
+.navbar .navbar-brand{
+    color: white;
+}
+.navbar #navbarSupportedContent a{ 
+    color: rgba(201, 219, 216, 0.753);
+    font-size: 1.1rem;
+}
+.navbar #navbarSupportedContent a:hover{
+    color: white;
+}
+nav ul li a:hover{
+    color: var(--col-selector) !important;
+}
+
+
+/* ----------------MAIN-------------- */
+/*   main{
+    width: 60%;
+    margin: auto;
+} */
+/* -------------CUADROS------------ */
+#cuadro-a, #cuadro-b, #cuadro-c{
+    width: 18rem;
+    height: 18rem;
+    border-width: 2px;
+    }
+.text-cuadro{
+    line-height: 4rem;
+    font-size: 1.3rem;
+}
+.alto-cuadro{
+    line-height: 4 !important;
+}
+
+.form-control, .form-select{
+    line-height: 2rem !important;
+}
+#btn-borrar, #btn-resumen{
+    line-height: 2rem !important;
+}
+/* -----------FORMULARIO-------------- */
+.cuadro-t-pagar{
+    background-color: #cce5ff !important;
+}
+
+#botones-b-r{
+    margin-top: 1.2rem !important;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+#cont-form{
+    width: 60%;
+}
+@media screen and (max-width: 576px){
+    #cont-form{
+        width: 80% !important;
+    }
+}
+.btn-color{
+    background-color: #96c83e !important;
+    color: white;
+}
+
+/* --------------FOOTER------------------ */
+.bg-gradient{
+    background-image: linear-gradient(to right, #1d3947, #1e5070) !important;
+}
+
+footer .container{
+    padding: 0.5rem;
+}
+footer .container a{
+    text-decoration: none;
+    color: white;
+}
+
